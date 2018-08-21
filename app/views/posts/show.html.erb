@@ -2,12 +2,12 @@
 
 <p><%= @post.content %></p>
 
-Comments: 
+Comments:
 <div>
   <% @post.comments.each do |comment| %>
     <%= "#{comment.user.username} says: #{comment.content}" %>
-  <% end %> 
-</div> 
+  <% end %>
+</div>
 
 Users:
 <ul>
@@ -17,3 +17,10 @@ Users:
     </li>
   <% end %>
 </ul>
+
+Categories:
+<div>
+  <% @post.categories.each do |category| %>
+    <%= category.name %>
+  <% end %>
+</div>
